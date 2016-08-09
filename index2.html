@@ -1,0 +1,67 @@
+<!DOCTYPE  HTML> 4 
+<html>
+    <head>       
+        <title>工大学子</title> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=degvice-width,height=device-width,initial-scale=1.0,user-scalable=no" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>      
+    </head>
+    <body> 
+        <!-- 首页     -->
+        <div data-role="page" id="index">
+            <!-- 首页-内容 -->
+            <div data-role="content">
+                <!-- <a href="#" id="ajaxtest" data-role="button">ajax</a>
+                <div id="neirong"></div> -->
+                <div class="box">
+                <div class="header"><img src="img/logo.jpg"></div>
+                <div class="banner"><span><img src="img/online.png">&nbsp;工大学子</span></div>
+                <div class="container" id="con">
+    
+                </div>                
+            </div>
+
+            </div>       
+        </div>       
+
+    <script type="text/javascript">
+        var url_index="json/home.json";
+        // index ajax获取数据
+        $(document).ready(function(){           
+            $.ajax({ 
+                type: "GET",    
+                url: url_index,
+                dataType: "json",
+                success: function(data) {
+                    var html="";
+                    if (data.stat) {
+                        for (var i = 0; i < data.data.length; i=i+2) {
+                            var j = i+1;
+                            var k = i+2;
+                            var title1 = data.data[i].title;
+                            var title2 = data.data[j].title;
+                            var src1 = data.data[j].src;
+                            var src2 = data.data[k].src;
+                            var banner1 = data.data[j].banner;
+                            var banner2 = data.data[k].banner;
+                            html = html+"<div class='middle_content'><div><span><a id='title1' href='"+src1+"'>&nbsp;&nbsp;<img src='img/banner"+j+".png'>&nbsp;"+title1+"</a></span></div><div><span><a id='title2' href='"+src2+"'>&nbsp;&nbsp;<img src='img/banner"+k+".png'>&nbsp;"+title2+"</a></span></div></div>";
+                        }
+                        $("#con").html(function(i,orgtext){
+                                return html;
+                        })
+                    } else {
+                        alert("出现错误：" + data.data[1].title);
+                    }  
+                },
+                error: function(jqXHR){
+                   alert("发生错误：" + jqXHR.status);  
+                },     
+            });
+    });
+    </script>
+    </body>
+    
+</html>

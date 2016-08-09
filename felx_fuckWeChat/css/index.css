@@ -1,0 +1,183 @@
+a {
+	text-decoration: none;
+}
+body,html {
+	width: 100%;
+	height: 100%;
+}
+.box {
+	margin-top: 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb( 241, 249, 254 );
+}
+
+/*首页*/
+.header {
+	width: 100%;
+	height: 27%;
+}
+.header img{
+	width: 100%;
+	height: 172.797px;
+	/*倒影*/
+	-webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.3)));
+}
+
+.user_header,.banner {
+	display: flex;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+  	align-items: center;
+  	-webkit-align-items: center;
+    font-size: 1.9rem;
+    font-family: "Microsoft YaHei";
+    color: rgb( 4, 133, 219 );
+    font-weight: bold;
+    line-height: 0.833;
+    letter-spacing: 0.5rem;
+}
+.banner {
+	width: 100%;
+	height: 13.6%;
+}
+.banner img,.user_header img {
+	width: 2rem;
+	height: 2rem;
+}
+.container {
+	display: flex;
+	display:-webkit-box;/* android 2.1-3.0, ios 3.2-4.3 */
+    display:-webkit-flex;/* Chrome 21+ */
+    display: box;
+	flex-wrap: wrap;
+	-webkit-flex-wrap:wrap;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	height: 50%;
+	-webkit-align-content:space-around;
+	align-content: space-around;
+}
+.content {
+	/*实现间隔相等*/
+	width: 94.14%;
+	margin-left: 2.93%;
+
+	display: flex;
+	display:-webkit-box;/* android 2.1-3.0, ios 3.2-4.3 */
+    display:-webkit-flex;/* Chrome 21+ */
+    display: box;
+	justify-content: space-around;
+	justify-content: space-around;
+}
+.content div{
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 0.4rem;   
+    width: 41.2%;
+    height: 12.8%;
+}
+.content span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-left: 1.5%; 
+}
+.content div img {
+    width: 2.7rem;
+    height: 2.1rem;
+    vertical-align: middle;
+}
+.content div span {
+    font-size: 1rem;
+    font-family: "Microsoft YaHei";
+    line-height: 4rem;
+}
+.content div span a {
+    color: rgb( 253, 254, 255 );
+}
+.content div span a {
+    color: rgb( 253, 254, 255 );
+}
+.content div span a:active {
+	color: gray;
+}
+.content:nth-child(1) div:nth-child(1){
+	border-color: rgb( 26, 188, 156 ); 
+    background-color: rgb( 26, 188, 156 );
+}
+.content:nth-child(1) div:nth-child(2){
+	border-color: rgb( 52, 152, 219 ); 
+    background-color: rgb( 52, 152, 219 );
+}
+.content:nth-child(2) div:nth-child(1){
+	border-color: rgb( 243, 156, 18 ); 
+    background-color: rgb( 243, 156, 18 );
+}
+.content:nth-child(2) div:nth-child(2){
+	border-color: rgb( 155, 89, 182 ); 
+    background-color: rgb( 155, 89, 182 );
+}
+.content:nth-child(3) div:nth-child(1){
+	border-color: rgb( 192, 57, 43 ); 
+    background-color: rgb( 192, 57, 43 );
+}
+.content:nth-child(3) div:nth-child(2){
+	border-color: rgb( 1, 94, 88 ); 
+    background-color: rgb( 1, 94, 88 );
+}
+/*首页结束*/
+
+/*个人中心*/
+.user_content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 19.4%;
+}
+.user_header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 19.4%;
+	background-image: url(../img/userspace_header.jpg);
+	background-size: 100% 100%;
+}
+.user_middle {
+	position: absolute;
+	top: 19.4%;
+	left: 0;
+	width: 100%;
+	height: 23.3%;
+	background-color: rgb(235,238,239);
+}
+.user_foot {
+	position: absolute;
+	top: 42.7%;
+	left: 0;
+	width: 100%;
+	height: 30%;
+	
+}
+.user_foot a {
+	font-size: 1.3rem;
+    font-family: "Microsoft YaHei";
+    color: rgb( 92, 87, 92 );
+    line-height: 1;
+    font-weight: 500;
+}
+.user_foot ul li {
+	margin-top: 20px;
+	width: 100%;
+	background-color: rgb(235,238,239);
+}
+
+
+
+

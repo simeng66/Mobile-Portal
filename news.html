@@ -1,0 +1,52 @@
+<!DOCTYPE  HTML>  
+<html>
+    <head>       
+        <title>工大学子</title> 
+        <meta charset="utf-8"> 
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport">
+        <link rel="stylesheet" type="text/css" href="css/news.css">        
+        <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>      
+    </head>
+    <body>
+        <div class="card_layer">
+            <div class="carditems" id="carditems">
+                
+            </div> 
+        </div> 
+          
+    <script type="text/javascript">
+        var newsjson="json/news.json";
+        // index ajax获取数据
+        $(document).ready(function(){           
+            $.ajax({ 
+                type: "GET",    
+                url: newsjson,
+                dataType: "json",
+                success: function(data) {
+                    if (data.stat) {
+                        var html = "";
+                        for (var i = 0; i < data.data.length; i++) {
+                            var url = data.data[i].url;
+                            var img = data.data[i].img;
+                            var title = data.data[i].title;
+                            // var description = data.data.[i].description;
+                            var description = data.data[i].description;
+                            var time = data.data[i].time;                            
+                            html = html+"<a href='"+url+"'><dl class='carditems_list'><dt class='carditems_list_dt'><img src='"+img+"'></dt><dd class='carditems_list_dd'><h3>"+title+"</h3><h4>"+description+"</h4><span class='fr'>"+time+"</span></dd></dl></a>";
+                        }    
+                        $("#carditems").html(function(i,orgtext){
+                            return html;
+                        })                        
+                    } else {
+                        alert("出现错误：" + data.data[1].title);
+                    }  
+                },
+                error: function(jqXHR){
+                   alert("发生错误：" + jqXHR.status);  
+                },     
+            });
+    });
+    </script>
+    </body>
+    
+</html>

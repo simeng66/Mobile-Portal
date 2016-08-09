@@ -1,0 +1,142 @@
+<!DOCTYPE  HTML>  
+<html>
+    <head>       
+        <title>test</title> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width,height=device-width,initial-scale=1.0,user-scalable=no" />
+        <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>      
+    </head>
+    <body> 
+        <!-- 首页     -->
+        <div data-role="page" id="index">
+            <!-- 首页-内容 -->
+            <div data-role="content">
+                <!-- <a href="#" id="ajaxtest" data-role="button">ajax</a>
+                <div id="neirong"></div> -->
+                <div class="box">
+                <div class="header"><img src="img/logo.jpg"></div>
+                <div class="banner"><span><img src="img/online.png">&nbsp;工大学子</span></div>
+                <div class="container">
+                    <div class="content">
+                        <div><span><img src="img/banner1.png">&nbsp;<a href="#">课程信息</a></span></div>
+                        <div><span><img src="img/banner2.png">&nbsp;<a href="#">闫导有话说</a></span></div>
+                    </div>
+                    <div class="content">
+                        <div><span><img src="img/banner3.png">&nbsp;<a href="#">宣讲会信息</a></span></div>
+                        <div><span><img src="img/banner4.png">&nbsp;<a href="#">加入我们</a></span></div>
+                    </div>
+                    <div class="content">
+                        <div><span><img src="img/banner5.png">&nbsp;<a href="#">课微党校&nbsp;</a></span></div>
+                        <div><span><img src="img/banner6.png">&nbsp;<a href="#">联系我们</a></span></div>
+                    </div>
+                </div>                
+            </div>
+
+            </div>
+            <!-- 首页-底部 -->
+            <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="footernav">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="" class=" ui-corner-all ui-icon-home ui-btn-icon-top ui-btn-active ui-state-persist"></a></li>
+                        <li><a href="#comment" class=" ui-corner-all ui-icon-comment ui-btn-icon-top"></a></li>                        
+                        <li><a href="#userspace" class=" ui-corner-all ui-icon-user ui-btn-icon-top"></a></li>
+                    </ul>
+                </div>
+           </div>
+        </div>
+
+        <!-- 消息中心 -->
+        <div data-role="page" id="comment">
+            <div data-role="header"><h1>消息中心</h1></div>
+            <div data-role="content">neirong</div>
+            <div data-role="footer" data-position="fixed"  data-tap-toggl="false" data-id="footernav">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#index" class="ui-icon-home ui-btn-icon-top"></a></li>
+                        <li><a href="" class="ui-icon-comment ui-btn-icon-top ui-btn-active ui-state-persist"></a></li>
+                        <li><a href="#userspace" class="ui-icon-user ui-btn-icon-top"></a></li>
+                    </ul>
+                </div>
+           </div>
+        </div>
+
+        <!-- 个人中心 -->
+        <div data-role="page" id="userspace">
+            <!-- 个人中心-内容 -->
+            <div data-role="main">
+                <div class="user_content">
+                    <div class="user_header">
+                        <span><img src="img/online.png">&nbsp;工大学子</span>
+                    </div>
+                    <div class="user_middle">
+                        ssdsd
+                    </div>
+                    <div class="user_foot">
+                        <ul data-role="listview">
+                            <li><a href="#">个人申请</a></li>
+                            <li><a href="#userspace_commit">意见反馈</a></li>
+                            <li><a href="#">关于我们</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+            </div>
+            <!-- 个人中心-底部 -->
+            <div data-role="footer" data-position="fixed"  data-tap-toggl="false"  data-id="footernav">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#index" class="ui-icon-home ui-btn-icon-top"></a></li>
+                        <li><a href="#comment" class="ui-icon-comment ui-btn-icon-top"></a></li>
+                        <li><a href="#" class="ui-icon-user ui-btn-icon-top ui-btn-active ui-state-persist"></a></li>
+                    </ul>
+                </div>
+           </div>
+        </div>
+
+        <!-- 个人中心-提交 -->
+        <div data-role="page" id="userspace_commit">
+            <!-- 个人中心-提交-内容 -->
+            <div data-role="main">
+                <div class="user_content">
+                    <div class="user_header">
+                        <span><img src="img/online.png">&nbsp;提交反馈</span>
+                    </div>
+
+                </div>
+                
+            </div>
+            <!-- 个人中心-提交-底部 -->
+            <div data-role="footer" data-position="fixed"  data-tap-toggl="false">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#index" class="ui-icon-home ui-btn-icon-top"></a></li>
+                        <li><a href="#comment" class="ui-icon-comment ui-btn-icon-top"></a></li>
+                        <li><a href="#" class="ui-icon-user ui-btn-icon-top ui-btn-active ui-state-persist"></a></li>
+                    </ul>
+                </div>
+           </div>
+        </div>    
+
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).on("pageinit","#index",function(){
+            $("#ajaxtest").click(function(){
+                $.get("http://localhost/mobilePortal/test.json",function(data,status){
+                    if (status=="success") {
+                        $("#neirong").html("lalala");
+                    }
+                });
+            });
+        })
+    </script>
+    </body>
+    
+</html>

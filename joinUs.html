@@ -1,0 +1,78 @@
+<!DOCTYPE  HTML>  
+<html>
+    <head>       
+        <title>工大学子</title> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=degvice-width,height=device-width,initial-scale=1.0,user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>      
+    </head>
+    <body>
+        <div class="jns_content">
+            <div class="jns_header">
+                <span><img src="img/online.png">&nbsp;加入我们</span>
+            </div>
+            <div class="jns_foot">
+                <ul>
+                    <li><a href="#userspace_position">&nbsp;&nbsp;<img src="img/ico视频.png">&nbsp;&nbsp;<span>个人申请</span><img src="img/jiantou.png"></a></li>
+                    <li><a href="#userspace_position">&nbsp;&nbsp;<img src="img/ico视频.png">&nbsp;&nbsp;<span>个人申请</span><img src="img/jiantou.png"></a></li>
+                    <li><a href="#userspace_position">&nbsp;&nbsp;<img src="img/ico视频.png">&nbsp;&nbsp;<span>个人申请</span><img src="img/jiantou.png"></a></li>
+                    <li><a href="#userspace_position">&nbsp;&nbsp;<img src="img/ico视频.png">&nbsp;&nbsp;<span>个人申请</span><img src="img/jiantou.png"></a></li>
+                    <li><a href="#userspace_position">&nbsp;&nbsp;<img src="img/ico视频.png">&nbsp;&nbsp;<span>个人申请</span><img src="img/jiantou.png"></a></li>
+                    <li><a href="#userspace_position">&nbsp;&nbsp;<img src="img/ico视频.png">&nbsp;&nbsp;<span>个人申请</span><img src="img/jiantou.png"></a></li>
+                    <li><a href="#userspace_position">&nbsp;&nbsp;<img src="img/ico视频.png">&nbsp;&nbsp;<span>个人申请</span><img src="img/jiantou.png"></a></li>
+                </ul>
+            </div>
+
+        </div>                
+       
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    <script type="text/javascript">
+        var url_index="json/home.json";
+        // index ajax获取数据
+        $(document).ready(function(){           
+            $.ajax({ 
+                type: "GET",    
+                url: url_index,
+                dataType: "json",
+                success: function(data) {
+                    if (data.stat) {
+                        for (var i = 0; i < data.data.length; i++) {
+                            j = i+1;
+                            var title = data.data[i].title;
+                            // console.log(data.data[i].title);
+                            var id = "#title"+j;
+                            var html = "&nbsp;&nbsp;<img src='img/banner"+j+".png'>&nbsp;"+title;
+                            // console.log(html);
+                            // console.log($("#title").html());
+                            $(id).html(function(i,orgtext){
+                                return html;
+                            })
+                        }
+                    } else {
+                        alert("出现错误：" + data.data[1].title);
+                    }  
+                },
+                error: function(jqXHR){
+                   alert("发生错误：" + jqXHR.status);  
+                },     
+            });
+    });
+    </script>
+    </body>
+    
+</html>

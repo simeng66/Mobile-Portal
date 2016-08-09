@@ -1,0 +1,62 @@
+{
+  "stat": "SUCCESS",
+  "statcode": "200",
+  "data": [
+    {
+      "id": "1",
+      "title": "课程信息",
+      "content": "多对多",
+      "src": "https://www.baidu.com/",
+      "banner": "1"
+    },
+    {
+      "id": "2",
+      "title": "闫导有话说",
+      "content": "多对多",
+      "src": "https://www.baidu.com/",
+      "banner": "1"
+    },
+    {
+      "id": "3",
+      "title": "宣讲会信息",
+      "content": "多对多",
+      "src": "https://www.baidu.com/",
+      "banner": "1"
+    },
+    {
+      "id": "4",
+      "title": "加入我们",
+      "content": "多对多",
+      "src": "https://www.baidu.com/",
+      "banner": "1"
+    },
+    {
+      "id": "5",
+      "title": "微党校",
+      "content": "多对多",
+      "src": "https://www.baidu.com/",
+      "banner": "1"
+    },
+    {
+      "id": "6",
+      "title": "联系我们",
+      "content": "多对多",
+      "src": "https://www.baidu.com/",
+      "banner": "1"
+    },
+    {
+      "id": "7",
+      "title": "新闻中心",
+      "content": "多对多",
+      "src": "https://www.baidu.com/",
+      "banner": "1"
+    },
+    {
+      "id": "8",
+      "title": "提交反馈",
+      "content": "多对多",
+      "src": "https://www.baidu.com/",
+      "banner": "1"
+    }
+  ]
+}

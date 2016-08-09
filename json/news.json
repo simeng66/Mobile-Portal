@@ -1,0 +1,30 @@
+{
+  "stat": "SUCCESS",
+  "statcode": "200",
+  "data": [
+    {
+      "id": "1",
+      "url": "baidu.com",
+      "img": "http://k.sinaimg.cn/n/news/transform/20160605/F3vk-fxsvrmp1889591.jpg/w180h135l50t15f9.jpg",
+      "title": "课程信息",
+      "description": "宣讲会信息1",
+      "time": "今天 10:15"
+    },
+    {
+      "id": "2",
+      "url": "baidu.com",
+      "img": "http://k.sinaimg.cn/n/news/transform/20160605/F3vk-fxsvrmp1889591.jpg/w180h135l50t15f9.jpg",
+      "title": "闫导有话说",
+      "description": "宣讲会信息2",
+      "time": "今天 10:15"
+    },
+    {
+      "id": "3",
+      "url": "baidu.com",
+      "img": "http://k.sinaimg.cn/n/news/transform/20160605/F3vk-fxsvrmp1889591.jpg/w180h135l50t15f9.jpg",
+      "title": "宣讲会信息",
+      "description": "宣讲会信息3",
+      "time": "今天 10:15"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE  HTML>  
+<html>
+    <head>       
+        <title>工大学子</title> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=degvice-width,height=device-width,initial-scale=1.0,user-scalable=no" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>      
+    </head>
+    <body> 
+        <!-- 个人中心-提交 -->
+        <div data-role="page" id="userspace_commit">
+            <!-- 个人中心-提交-内容 -->
+            <div data-role="main">
+                <div class="user_content">
+                    <div class="user_header">
+                        <span><img src="img/online.png">&nbsp;意见反馈</span>
+                    </div>
+                    <div class="yijian">
+                        <textarea rows="3" cols="20" id="yijian">意见反馈......</textarea>
+                    </div>
+                    <div>
+                        <span class="tijiao"><a href="#" id="tijiao">提交</a></span>
+                    </div>
+                </div>               
+            </div>
+        </div>      
+    </body>
+    <script type="text/javascript">       
+        var url = "/api/sug/post";
+        $("#tijiao").click(function(){ 
+        $.ajax({ 
+            type: "POST",   
+            url: "",
+            data: {
+                content: $("yijian").val()
+            },
+            dataType: "json",
+            success: function(data){
+                if (data.success) { 
+                    alert("提交成功！");
+                } else {
+                    alert("出现错误！");
+                }  
+            },
+            error: function(jqXHR){     
+               alert("发生错误：" + jqXHR.status);  
+            },     
+        });
+    });
+    </script>
+</html>
